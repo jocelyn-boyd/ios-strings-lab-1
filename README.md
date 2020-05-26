@@ -13,29 +13,63 @@
 
 Write code that prints out all the numbers from 1 to 10 as a single string.
 (Hint: the `String()` function can convert an Int to a String)
+```swift
+var string = ""
+
+for i in 1...10 {
+  string += "\(i)"
+}
+print(string)
+```
 
 ***
 ## Question 2
 
 Write code that prints out all the even numbers from 5 to 51 as a single string.
+```swift
+var string = ""
+
+for i in 5...51 where num % 2 == 0 {
+  string += "\(i) "
+}
+print(string)
+```
 
 ***
 ## Question 3
 
 Write code that prints out every number ending in 4 between 1 and 60 as a single string.
+```swift
+for i in 1...60 where i % 5 == 0 && i % 10 != 0 {
+  string += "\(i - 1) "
+}
+print(string)
+```
 
 ***
 ## Question 4
 
 Print each character in the string `"Hello world!"`
+```swift
+var string = "Hello World!"
+
+for char in string {
+  print(char)
+}
+```
 
 ***
 ## Question 5
 
 Print out the last character in the string below.  You cannot use the Character literal "!" (i.e you must access `myStringSeven`'s characters).
+```swift
+let myStringSeven = "Hello world!"
 
-`let myStringSeven = "Hello world!"`
-
+let myStringEnd = myStringSeven.endIndex
+let lastCharIndex = myStringSeven.index(before: myStringEnd)
+let lastChar = myStringSeven[lastCharIndex]
+print(lastChar)
+```
 ***
 ## Question 6
 
